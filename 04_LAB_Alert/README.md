@@ -13,9 +13,10 @@ El objetivo de este laboratorio es explorar las funcionalidades de creación de 
 ## Ejercicio 04.01 - Creación de la consulta
 
 ``` sql
-
+USE CATALOG `<<nombre_catalogo>>`;
+USE <<nombre_esquema>>;
 select dolar_cotizacion as valor_dolar
-FROM academy.<tu_login>.bronze_dolar
+FROM bronze_dolar
 order by dolar_dia DESC;
 
 

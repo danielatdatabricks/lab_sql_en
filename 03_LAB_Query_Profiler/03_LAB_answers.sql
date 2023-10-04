@@ -1,28 +1,10 @@
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/header_handson_sql.png">
-
-# Práctica LAB 03 - Explorando el Query Profiler
-
-Entrenamiento práctico en la plataforma Databricks centrado en las funcionalidades de análisis (SQL, Query, Dask, DataViz, SQL end-point).
-
-## Objetivos del Ejercicio
-
-El objetivo de este laboratorio es explorar las funcionalidades del plan de ejecución de consultas (Query Profiler). Identificando los cuellos de botella y oportunidades de mejora en rendimiento.
-</br></br>
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/desnormaliza.png">
-
-Vamos a usar el "Editor SQL".
-
-## Ejercicio 03.01 - Creación de la Consulta
-
-``` sql
+-- Ejercicio 03.01 - Creación de la Consulta
 
 /**********************************
 ## CONFIGURACIÓN DE PARÁMETROS
 ***********************************/
-USE CATALOG `<nombre_catalogo>`;
-USE <nombre_schema>;
+USE CATALOG <nombre_catalogo>;
+USE <nombre_esquema>;
 /**********************************/
 
 CREATE OR REPLACE TABLE silver_empresas AS
@@ -62,44 +44,13 @@ left join bronze_naturezas nat
 on emp.naturaleza_juridica = nat.codigo;
 
 
-```
+-- Ejercicio 03.06 - Añadiendo Comentarios en la Tabla y en las Columnas
 
-## Ejercicio 03.02 - Visualizando el Historial de ejecución de las Consultas
-
-
-En el Menú, elija la opción "Historial de Consultas"
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_1.png" style="height: 200px;">
-Filtre las Consultas (por ejemplo, seleccione sus propias Queries):
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_2.png" style="height: 300px;">
-
-
-## Ejercicio 03.03 - Analizando el Detalle de la Ejecución
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_3.png" style="height: 200px;">
-
-
-## Ejercicio 03.04 - Analizando el Query Profiler
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_4.png" style="height: 200px;">
-
-
-## Ejercicio 03.05 - Analizando el Plan de Ejecución
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_5.png" style="height: 250px;">
-
-<img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_6.png" style="height: 700px;">
-
-
-## Ejercicio 03.06 - Añadiendo Comentarios en la Tabla y en las Columnas
-
-``` sql
 /**********************************
 ## CONFIGURACIÓN DE PARÁMETROS
 ***********************************/
-USE CATALOG `latam-workshop-sql`;
-USE murguia_lab_01;
+USE CATALOG <nombre_catalogo>;
+USE <nombre_esquema>;
 /**********************************/
 
 COMMENT ON TABLE silver_empresas IS 'Tabla con datos de las empresas';
@@ -126,5 +77,3 @@ ALTER TABLE silver_empresas ALTER COLUMN val_capital_social COMMENT 'Valor del c
 ALTER TABLE silver_empresas ALTER COLUMN cod_tipo_empresa COMMENT 'Código del Tipo de Empresa';
 ALTER TABLE silver_empresas ALTER COLUMN desc_tipo_empresa COMMENT 'Descripción del Tipo de Empresa';
 ALTER TABLE silver_empresas ALTER COLUMN entidad_federativa_responsable COMMENT 'Entidad Federativa Responsable';
-```
-
