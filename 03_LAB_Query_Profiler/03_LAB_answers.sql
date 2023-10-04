@@ -10,38 +10,38 @@ USE <nombre_esquema>;
 CREATE OR REPLACE TABLE silver_empresas AS
 SELECT 
   est.cnpj_basico AS cnpj_basico,
-  matriz_filial AS nome_matriz,
-  nome_fantasia AS nome_fantasia_empresa,
-  razao_social AS nome_razao_social,
-  codigo_situacao_cadastral AS cod_situacao_cadastral,
-  data_situacao_cadastral AS data_situacao_cadastral,
-  motivo_situacao_cadastral AS motivo_situacao_cadastral,
-  data_inicio_atividade AS data_inicio_atividade,
+  matriz_filial AS nombre_matriz,
+  nombre_comercial AS nombre_comercial_empresa,
+  razon_social AS nombre_razon_social,
+  codigo_situacion_cadastral AS cod_situacion_cadastral,
+  data_situacion_cadastral AS data_situacion_cadastral,
+  motivo_situacion_cadastral AS motivo_situacion_cadastral,
+  inicio_actividades AS data_inicio_actividades,
   cnae_principal AS cnae_principal,
-  cnae.descricao AS cnae_descricao,
-  tipo_logradouro AS endereco_tipo_logradouro,
-  logradouro AS endereco_nome_logradouro,
-  numero AS endereco_numero_logradouro,
-  bairro AS endereco_bairro_logradouro,
-  cep AS endereco_numero_cep,
-  uf AS endereco_unidade_federativa,
-  codigo_municipio_siafi AS codigo_municipio_siafi,
-  natureza_juridica AS cod_natureza_juridica,
-  nat.descricao AS desc_natureza_juridica,
-  qualificacao_responsavel AS qualificacao_responsavel,
+  cnae.descripcion AS cnae_descripcion,
+  tipo_via AS direccion_tipo_via,
+  via AS via,
+  numero AS direccion_nombre_via,
+  colonia AS direccion_colonia,
+  cp AS direccion_codigo_postal,
+  uf AS direccion_entidad_federativa,
+  codigo_municipio_siafi AS codigo_municipio,
+  naturaleza_juridica AS cod_naturaleza_juridica,
+  nat.descripcion AS desc_naturaleza_juridica,
+  calificacion_responsable AS calificacion_responsable,
   capital_social AS val_capital_social,
-  emp.porte_empresa AS cod_porte_empresa,
-  porte.desc_porte_empresa AS desc_porte_empresa,
-  ente_federativo_responsavel AS ente_federativo_responsavel
+  emp.tipo_empresa AS cod_tipo_empresa,
+  porte.desc_tipo_empresa AS desc_tipo_empresa,
+  entidad_federativa_responsable AS entidad_federativa_responsable
 from bronze_estabelecimentos est
 join bronze_empresas emp
 on est.cnpj_basico = emp.cnpj_basico
 left join bronze_cnae cnae
 on est.cnae_principal = cnae.cod_cnae
-left join bronze_porte_empresa porte
-on emp.porte_empresa = porte.porte_empresa
+left join bronze_tipo_empresa porte
+on emp.tipo_empresa = porte.tipo_empresa
 left join bronze_naturezas nat
-on emp.natureza_juridica = nat.codigo;
+on emp.naturaleza_juridica = nat.codigo;
 
 
 -- Ejercicio 03.06 - Añadiendo Comentarios en la Tabla y en las Columnas
@@ -55,7 +55,6 @@ USE <nombre_esquema>;
 
 COMMENT ON TABLE silver_empresas IS 'Tabla con datos de las empresas';
 
-ALTER TABLE silver_empresas ALTER COLUMN identificador COMMENT 'Identificador';
 ALTER TABLE silver_empresas ALTER COLUMN nombre_matriz COMMENT 'Nombre de la Matriz';
 ALTER TABLE silver_empresas ALTER COLUMN nombre_comercial_empresa COMMENT 'Nombre Comercial';
 ALTER TABLE silver_empresas ALTER COLUMN nombre_razon_social COMMENT 'Razón Social';
@@ -67,7 +66,6 @@ ALTER TABLE silver_empresas ALTER COLUMN cnae_principal COMMENT 'Código de Natu
 ALTER TABLE silver_empresas ALTER COLUMN cnae_descripcion COMMENT 'Descripción de Naturaleza Económica';
 ALTER TABLE silver_empresas ALTER COLUMN direccion_tipo_via COMMENT 'Dirección - Tipo de Vía';
 ALTER TABLE silver_empresas ALTER COLUMN direccion_nombre_via COMMENT 'Dirección - Nombre de Vía';
-ALTER TABLE silver_empresas ALTER COLUMN direccion_numero_via COMMENT 'Dirección - Número de Vía';
 ALTER TABLE silver_empresas ALTER COLUMN direccion_colonia COMMENT 'Dirección - Colonia';
 ALTER TABLE silver_empresas ALTER COLUMN direccion_codigo_postal COMMENT 'Dirección - Código Postal';
 ALTER TABLE silver_empresas ALTER COLUMN direccion_entidad_federativa COMMENT 'Dirección - Entidad Federativa';
