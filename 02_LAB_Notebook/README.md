@@ -26,7 +26,7 @@ In the URL text field, enter the highlighted LINK address below:
 
 ``` html
 
-https://github.com/pieroocampo/lab_sql/blob/main/02_LAB_Notebook/lab02_01_carga_csv.ipynb
+https://github.com/danielatdatabricks/lab_sql_en/blob/main/02_LAB_Notebook/lab02_01_carga_csv.ipynb
 
 ```
 As shown in the following figure:
