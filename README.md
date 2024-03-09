@@ -7,16 +7,17 @@ Practical training on the Databricks platform focused on Analytics functionaliti
 
 ## Temario del Curso
 
-| # | Temas | Duración |
-| -- | -- | -- |
-| 1 | Concepto de Lakehouse, Databricks SQL, Costo eficiente, SQL Serverless, Menús e IU | 30 min |
-| 2 | Laboratorio 01 - Comandos básicos en SQL en el Editor de SQL y Unity Catalog       | 30 min |
-| 3 | Laboratorio 02 - Ingesta de tablas CSV, Uso de Notebook y Data Explorer            | 30 min |
-| 4 | Laboratorio 03 - Consultas avanzadas, Historial de Query y Query Profiler          | 30 min |
-| 5 | Laboratorio 04 - Creación de una Alerta                                           | 30 min |
-| 6 | Laboratorio 05 - Creación de un Panel (Dashboard)                                 | 30 min |
-| 7 | Consideraciones finales, Integración de Soluciones y Referencias Adicionales       | 30 min |
-| 8 | Preguntas y Respuestas                                                            | 15 min |
+| # | Temas 
+| -- | -- 
+| 1 | Lakehouse concept, Databricks SQL, Cost-efficient, SQL Serverless, Menus and UI
+| 2 | Lab 01 - Basic SQL commands in the SQL Editor and Unity Catalog
+| 3 | Lab 02 - Ingestion of CSV tables, Use of Notebook and Data Explorer
+| 4 | Lab 03 - Advanced queries, Query History, and Query Profiler
+| 5 | Lab 04 - Creating an Alert
+| 6 | Lab 05 - Creating a Dashboard
+| 7 | Final considerations, Integration of Solutions, and Additional References
+| 8 | Questions and Answers
+
 
 </br>
 
