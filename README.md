@@ -5,9 +5,9 @@
 
 Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
-## Temario del Curso
+## Topics of training
 
-| # | Temas 
+| # | Description 
 | -- | -- 
 | 1 | Lakehouse concept, Databricks SQL, Cost-efficient, SQL Serverless, Menus and UI
 | 2 | Lab 01 - Basic SQL commands in the SQL Editor and Unity Catalog
@@ -21,11 +21,11 @@ Practical training on the Databricks platform focused on Analytics functionaliti
 
 </br>
 
-## Referencias Adicionales
+## Additional References
 
-* [Página principal de Databrick SQL](https://www.databricks.com/product/databricks-sql)
+* [Databrick SQL](https://www.databricks.com/product/databricks-sql)
 * [What is Data Warehousing on Databricks](https://docs.databricks.com/sql/index.html#what-is-data-warehousing-on-databricks)
-* [SQL Language reference - Inglés](https://docs.databricks.com/sql/language-manual/index.html)
+* [SQL Language reference - English](https://docs.databricks.com/sql/language-manual/index.html)
 * [SQL Language reference - Español](https://learn.microsoft.com/es-mx/azure/databricks/sql/language-manual)
 
 
