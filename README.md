@@ -3,7 +3,7 @@
 
 # Databricks SQL Labs 
 
-Entrenamiento práctico en la plataforma Databricks centrado en las funcionalidades de Analytics (SQL, Query, Dask, DataViz, SQL end-point).
+Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
 ## Temario del Curso
 
