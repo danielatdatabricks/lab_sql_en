@@ -1,20 +1,20 @@
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/header_handson_sql.png">
 
-# Práctica LAB 04 - Creación de una ALERTA
+# LAB Practice 04 - Creating an ALERT
 
-Entrenamiento práctico en la plataforma Databricks centrado en las funcionalidades de análisis (SQL, Query, Dask, DataViz, SQL end-point).
+Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
-## Objetivos del Ejercicio
+## Exercise Objectives
 
-El objetivo de este laboratorio es explorar las funcionalidades de creación de una ALERTA.
+The objective of this laboratory is to explore the functionalities of creating an ALERT.
 
 </br></br>
 
-## Ejercicio 04.01 - Creación de la consulta
+## Exercise 04.01 - Creating the query
 
 ``` sql
-USE CATALOG `<<nombre_catalogo>>`;
-USE <<nombre_esquema>>;
+USE CATALOG `<<academy>>`;
+USE <<YOUR_USER>>;
 select dolar_cotizacion as valor_dolar
 FROM bronze_dolar
 order by dolar_dia DESC;
@@ -22,17 +22,17 @@ order by dolar_dia DESC;
 
 ```
 </br></br>
-Guarda la Query. Sugerencia: "Query_Alerta"+ <tu_login>
+Save the Query. Tip: "Query_Alert" + <your_user>
 </br></br>
 
 
-Ejercicio 04.02 - Creando la Alerta
-Vamos a usar la opción del menú "ALERTA".
+Exercise 04.02 - Creating the Alert
+We will use the "ALERT" menu option.
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab04_1.png" style="height: 200px;">
 </br></br>
 
-Haz clic en el botón CREAR y configura la ALERTA como se muestra a continuación:
+Click on the CREATE button and configure the ALERT as shown below:
 
 </br></br>
 
