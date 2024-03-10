@@ -1,25 +1,25 @@
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/header_handson_sql.png">
 
-# Práctica LAB 03 - Explorando el Query Profiler
+# LAB Practice 03 - Exploring the Query Profile
 
-Entrenamiento práctico en la plataforma Databricks centrado en las funcionalidades de análisis (SQL, Query, Dask, DataViz, SQL end-point).
+Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
-## Objetivos del Ejercicio
+## Exercise Objectives
 
-El objetivo de este laboratorio es explorar las funcionalidades del plan de ejecución de consultas (Query Profiler). Identificando los cuellos de botella y oportunidades de mejora en rendimiento.
+The objective of this laboratory is to explore the functionalities of the query execution plan (Query Profiler). Identifying bottlenecks and performance improvement opportunities.
 </br></br>
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/desnormaliza.png">
 
-Vamos a usar el "Editor SQL".
+We will use the "SQL Editor".
 
-## Ejercicio 03.01 - Creación de la Consulta
+## Exercise 03.01 - Creating the Query
 
 ``` sql
 
 /**********************************
-## CONFIGURACIÓN DE PARÁMETROS
+## PARAMETERS CONFIGURATION
 ***********************************/
 USE CATALOG `<nombre_catalogo>`;
 USE <nombre_schema>;
@@ -64,42 +64,41 @@ on emp.naturaleza_juridica = nat.codigo;
 
 ```
 
-## Ejercicio 03.02 - Visualizando el Historial de ejecución de las Consultas
+## Exercise 03.02 - Viewing the Query Execution History
 
-
-En el Menú, elija la opción "Historial de Consultas"
+In the Menu, choose the "Query History" option.
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_1.png" style="height: 200px;">
-Filtre las Consultas (por ejemplo, seleccione sus propias Queries):
+Filter Queries (for example, select your own Queries):
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_2.png" style="height: 300px;">
 
 
-## Ejercicio 03.03 - Analizando el Detalle de la Ejecución
+## Exercise 03.03 - Analyzing Execution Details
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_3.png" style="height: 200px;">
 
 
-## Ejercicio 03.04 - Analizando el Query Profiler
+## Exercise 03.04 - Analyzing the Query Profiler
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_4.png" style="height: 200px;">
 
 
-## Ejercicio 03.05 - Analizando el Plan de Ejecución
+## Exercise 03.05 - Analyzing the Execution Plan
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_5.png" style="height: 250px;">
 
 <img src="https://raw.githubusercontent.com/Databricks-BR/lab_sql/main/images/lab03_6.png" style="height: 700px;">
 
 
-## Ejercicio 03.06 - Añadiendo Comentarios en la Tabla y en las Columnas
+## Exercise 03.06 - Adding Comments to the Table and Columns.
 
 ``` sql
 /**********************************
-## CONFIGURACIÓN DE PARÁMETROS
+## PARAMETERS CONFIGURATION
 ***********************************/
-USE CATALOG `latam-workshop-sql`;
-USE murguia_lab_01;
+USE CATALOG `academy`;
+USE <YOUR_USER>;
 /**********************************/
 
 COMMENT ON TABLE silver_empresas IS 'Tabla con datos de las empresas';
