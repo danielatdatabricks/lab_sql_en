@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/header_handson_sql.png">
 
-# Practical Lab 05 - Exploring the Dashboard
+# LAB Practice 05 - Exploring the Dashboard
 
 Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
