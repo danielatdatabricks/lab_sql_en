@@ -1,70 +1,70 @@
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/header_handson_sql.png">
 
-# Laboratorio Práctico 05 - Explorando el Tablero (Panel de Control)
+# Practical Lab 05 - Exploring the Dashboard
 
-Entrenamiento práctico en la plataforma Databricks enfocado en las funcionalidades de análisis (SQL, Query, Dask, DataViz, SQL end-point).
+Practical training on the Databricks platform focused on Analytics functionalities (SQL, Query, Dask, DataViz, SQL end-point).
 
-## Objetivos del Ejercicio
+## Exercise Objectives
 
-El objetivo de este laboratorio es explorar las funcionalidades de consultas con Gráficos de Visualización y Filtros para luego montar un Panel de Control.
+The objective of this laboratory is to explore query functionalities with Visualization Charts and Filters to then assemble a Dashboard.
 
-Vamos a utilizar el "Editor SQL".
+We will use the "SQL Editor".
 
-## Ejercicio 05.01 - Creación de la Consulta
+## Exercise 05.01 - Creating the Query.
 
 ``` sql
-SELECT * FROM <nombre_catalogo>.<nombre_esquema>.bronze_dolar;
+SELECT * FROM <CATALOG_NAME>.<SCHEMA_NAME>.bronze_dolar;
 
 
 ```
-Resultado de la consulta:
+Query result:
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_01.png" style="height: 200px;">
 
 
 </br></br>
 
-## Ejercicio 05.02 - Creando la Visualización y el Filtro
-En la barra de resultados, haz clic en el botón "+", y elige la opción "Visualización".
+## Exercise 05.02 - Creating the Visualization and Filter
+In the results bar, click on the "+" button, and choose the "Visualization" option.
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_02.png" style="height: 200px;">
-En Tipo de Visualización, elige "LINE":
+In Visualization Type, choose "LINE":
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_03.png" style="height: 200px;">
-En la "X Column" (eje X), elige la variable "dolar_dia".
+In the "X Column" (X-axis), select the variable "dolar_dia".
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_04.png" style="height: 200px;">
-En la "Y Columns" (eje Y), elige la variable "dolar_cotizacion".
-Elige también la forma de agregación: Media (Promedio).
+In the "Y Columns" (Y-axis), select the variable "dolar_cotizacion".
+Also, choose the aggregation method: Average.
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_05.png" style="height: 200px;">
-Haz clic en el título de la visualización y renómbralo a "grafico_dolar".
+Click on the visualization title and rename it to "dollar_chart".
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_06.png" style="height: 150px;">
-El resultado esperado es igual al gráfico de abajo:
+The expected result is similar to the graph below:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_07.png" style="height: 500px;">
-Haz clic nuevamente en el botón "+", y añade un FILTRO:
+Click again on the "+" button, and add a FILTER:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_09.png" style="height: 150px;">
-Elige la columna "dolar_anio" para usar en el FILTRO:
+Choose the column "dolar_anio" to use in the FILTER:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_10.png" style="height: 300px;">
-El resultado se verá así:
+The result will look like this:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_11.png" style="height: 250px;">
-Guarda el resultado de la Consulta, con el nombre: "Query_Historico_dolar_" + <tu_login>.
+Save the Query result with the name: "Query_Historical_dollar_" + <YOUR_USER>.
 </br></br></br>
 
-## Ejercicio 05.03 - Creando el Dashboard
-En el Menú Lateral, elige la opción DASHBOARDS:
+## Exercise 05.03 - Creating the Dashboard
+In the Side Menu, choose DASHBOARDS:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_08.png" style="height: 150px;">
-Haz clic en la opción CREATE DASHBOARD.
+Click on CREATE DASHBOARD option.
 
-En la pantalla del Dashboard, haz clic en el botón "ADD", y elige la opción: "TEXT BOX".
+On the Dashboard screen, click on the "ADD" button, and choose "TEXT BOX" option.
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_12.png" style="height: 100px;">
-En el campo texto, escribe lo siguiente:
+In the text field, write the following:
 
 ``` md
 
@@ -75,7 +75,7 @@ En el campo texto, escribe lo siguiente:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_13.png" style="height: 300px;">
 
-Repite la operación.  haz clic en el botón "ADD", y elige la opción: "TEXT BOX". Escribe lo siguiente:
+Repeat the operation. Click on "ADD" button again, and choose "TEXT BOX" option. Write the following:
 
 ``` md
 
@@ -86,21 +86,21 @@ Repite la operación.  haz clic en el botón "ADD", y elige la opción: "TEXT BO
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_14.png" style="height: 200px;">
 
-Haz clic nuevamente en el botón ADD, y selecciona la opción "VISUALIZATION".
+Click again on ADD button, and select "VISUALIZATION" option.
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_15.png" style="height: 200px;">
 
-Elige el nombre de la consulta que se guardó en el ejercicio anterior.
+Choose the name of the query saved in the previous exercise.
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_16.png" style="height: 250px;">
 
-Haz clic nuevamente en el botón ADD, y selecciona la opción "FILTRO", y configura según lo siguiente:
+Click ADD button again, and select "FILTER", and configure as follows:
 
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_17.png" style="height: 200px;">
 
 </br></br></br>
 
-El resultado final debería verse como sigue. Guarda tu dashboard.
+The final result should look like this. Save your dashboard.
 
 </br></br>
 <img src="https://raw.githubusercontent.com/databricks-latam-es/lab_sql/main/images/lab05_final.png" style="height: 600px;">
